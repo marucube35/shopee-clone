@@ -17,7 +17,6 @@
 
 .navbar {
     display: flex;
-    /* padding: 0 12px; */
     height: var(--navbar-height);
 }
 
@@ -29,13 +28,14 @@
 }
 
 .navbar__list:nth-of-type(2) {
+    margin-left: auto;
     justify-content: flex-end;
 }
 
 .navbar__item {
     position: relative;
     display: inline-block;
-    margin: 0 10px;
+    padding: 0 10px;
 }
 
 .navbar__item,
@@ -63,7 +63,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: -14px;
+    right: -2px;
     display: block;
     border-left: 1px solid #fa8e82;
     border-right: 1px solid #fa8e82;
@@ -585,7 +585,8 @@
 
 .mobile__search {
     display: none;
-    padding: 0 12px;
+    padding: 0 12px 0 6px;
+    cursor: pointer;
 }
 
 .mobile-search-icon {
@@ -600,7 +601,7 @@
 /*----------  Logo  ----------*/
 
 .logo {
-    /* padding-left: 8px; */
+    padding-left: 8px;
     width: 200px;
     text-decoration: none;
     color: transparent;
@@ -872,9 +873,11 @@
 }
 
 .cart__list-img {
+    margin: auto;
     width: 50%;
     height: 110px;
-    object-fit: cover;
+    background:url(https://www.metro-markets.com/plugins/user/images/emptycart.png) center  no-repeat;
+    background-size: cover;
 }
 
 .cart__list-message {
@@ -882,6 +885,7 @@
     margin-top: 18px;
     font-size: 1.4rem;
     color: var(--text-color);
+    text-align: center;
 }
 
 /* Cart has products */
@@ -1543,6 +1547,7 @@ i.home-product-item__like-icon-fill {
 }
 
 .footer__download-link {
+    display: block;
     text-decoration: none;
     color: transparent;
 }

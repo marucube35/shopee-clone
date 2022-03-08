@@ -450,6 +450,11 @@
         margin-right: -5px;
     }
 
+    .wide .row.no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .wide .col {
         padding-left: 12px;
         padding-right: 12px;

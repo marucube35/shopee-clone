@@ -1,7 +1,7 @@
 /* Mobile & tablet */
 @media (max-width: 1023px) {
     :root {
-        --header-height: 68px;
+        --header-height: 54px;
         --navbar-height: 0px;
     }
 
@@ -9,7 +9,7 @@
         display: none;
     }
 
-    .show-on-mobile-tablet{
+    .show-on-mobile-tablet {
         display: block;
     }
 
@@ -29,12 +29,12 @@
         margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
     }
 
-    .app__content{
+    .app__content {
         padding-top: 8px;
     }
 
-    .mobile__category-list{
-        margin-right: -10px;
+    .mobile__category-item:last-of-type {
+        margin-right: 0;
     }
 
     .cart__list {
@@ -52,6 +52,10 @@
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
     .hide-on-tablet {
         display: none;
     }
@@ -60,17 +64,23 @@
         width: 80px;
         text-align: right;
     }
+
+    .cart__list-img {
+        margin-top: 16px;
+        background-image: url(https://assets.materialup.com/uploads/66fb8bdf-29db-40a2-996b-60f3192ea7f0/preview.png);
+        background-size: cover;
+    }
+
+    .cart__list-message {
+        margin-top: 16px;
+        margin-bottom: 24px;
+    }
 }
 
 /* Mobile */
-
 @media (max-width: 739px) {
     .hide-on-mobile {
         display: none;
-    }
-
-    .show-on-mobile{
-        display: block;
     }
 
     .search {
@@ -83,8 +93,13 @@
         width: unset;
     }
 
-    .logo-image{
+    .logo-image {
         width: 110px;
+    }
+
+    .mobile__search {
+        display: flex;
+        align-items: center;
     }
 
     .search__box {
@@ -120,20 +135,56 @@
         box-shadow: 0 1px 2px rgba(0 0 0/5%);
     }
 
-    .app__content{
-        margin: 0 4px;
-        
+    .search__box-option-list {
+        background-color: var(--white-color);
     }
 
-    .pagination__item{
+    .cart-quantity {
+        right: 3px;
+        line-height: 1.2rem;
+    }
+
+    .cart__list-img {
+        margin-top: 20px;
+        background-size: contain;
+    }
+
+    .cart__list-message {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .app__content {
+        margin: 0 4px;
+    }
+
+    .pagination__item {
         margin: 0;
     }
 
-    .pagination__link{
+    .pagination__link {
         --height: 28px;
         font-size: 1.8rem;
         min-width: 36px;
     }
 
+    .footer__content {
+        padding: 0 16px;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+
+    .footer-item__link,
+    .footer__download {
+        justify-content: center;
+    }
 }
 
+/* PC Big resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .navbar__list {
+        display: flex;
+    }
+}
