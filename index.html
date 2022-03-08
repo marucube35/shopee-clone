@@ -33,8 +33,10 @@
         ></script>
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/base.css" />
-        <link rel="stylesheet" href="./assets/css/grid.css" />
         <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/grid.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+
     </head>
 
     <body>
@@ -43,7 +45,7 @@
             <header class="header">
                 <div class="grid wide">
                     <!-- Navigation Bar -->
-                    <nav class="row navbar">
+                    <nav class="navbar hide_on-mobile-tablet">
                         <!-- First Navigation -->
                         <ul class="col l-6 navbar__list">
                             <!-- Seller - App -->
@@ -69,22 +71,22 @@
                                     src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/d91264e165ed6facc6178994d5afae79.png"
                                     alt="QR Code" class="qr-code"">
 
-                                    <div class="row no-gutters qr-stores">
-                                        <a href="" class="col l-6 qr-link">
+                                    <div class="row qr-stores">
+                                        <a href="" class="qr-link">
                                             <img
                                                 src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/39f189e19764dab688d3850742f13718.png"
                                                 alt="Apple Store"
                                                 class="qr-img"
                                             />
                                         </a>
-                                        <a href="" class="col l-6 qr-link">
+                                        <a href="" class="qr-link">
                                             <img
                                                 src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/f4f5426ce757aea491dce94201560583.png"
                                                 alt="Google Play"
                                                 class="qr-img"
                                             />
                                         </a>
-                                        <a href="" class="col l-6 qr-link">
+                                        <a href="" class="qr-link">
                                             <img
                                                 src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/1ae215920a31f2fc75b00d4ee9ae8551.png"
                                                 alt="App Gallery"
@@ -128,7 +130,7 @@
                                         <li class="notify__item">
                                             <a
                                                 href="#"
-                                                class="row notify__link notify__link--viewed"
+                                                class="notify__link notify__link--viewed"
                                             >
                                                 <img
                                                     src="https://www.jeumobi.com/wp-content/uploads/2021/12/kyurem-pokemon-go.png"
@@ -164,7 +166,7 @@
                                         <li class="notify__item">
                                             <a
                                                 href="#"
-                                                class="row notify__link notify__link--viewed"
+                                                class="notify__link notify__link--viewed"
                                             >
                                                 <img
                                                     src="https://g2g.media/img/pkmn_name/MegaCharizardX.png?is-pending-load=1"
@@ -193,7 +195,7 @@
                                         <li class="notify__item">
                                             <a
                                                 href="#"
-                                                class="row notify__link notify__link--viewed"
+                                                class="notify__link notify__link--viewed"
                                             >
                                                 <img
                                                     src="https://static.pokebattler.com/assets/pokemon/256/pokemon_icon_250_00.png"
@@ -224,7 +226,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="row notify__buttons">
+                                    <div class="notify__buttons">
                                         <button class="col l-6 notify__button"
                                             >Đăng ký</button
                                         ><button class="col l-6 notify__button"
@@ -308,9 +310,15 @@
                         </ul>
                     </nav>
                     <!-- Search Bar -->
-                    <div class="row search">
+                    <div class="search">
+                        <input id="mobile-search-checkbox" hidden type="checkbox" class="mobile-search-checkbox">
+                        <label for="mobile-search-checkbox" class="mobile__search hide-on-tablet">
+                            <i class="mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+
+
                         <!-- Logo -->
-                        <a href="/Shopee" class="logo">
+                        <a href="/Shopee" class="logo hide-on-tablet">
                             <svg loading="lazy" viewBox="0 0 192 65" class="logo-image">
                                 <g fill-rule="evenodd">
                                     <path fill="#fff"
@@ -378,7 +386,7 @@
                                             <img src="assets/images/poke_ball.png" alt="Poke ball" class="cart__product-img">
                                             <div class="cart__product-info">
                                                 <div class="cart__product-info-row">
-                                                    <h4 class="cart__product-name">Poké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ballPoké ball</h4>
+                                                    <h4 class="cart__product-name">Poké ball</h4>
                                                     <span class="cart__product-price">200.000.000đ
                                                         <span class="cart__product-multiply">x</span>
                                                         <span class="cart__product-quantity">1</span>
@@ -445,12 +453,27 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header__sort-bar">
+                    <!-- Header sort list -->
+                    <li class="header__sort-item">
+                        <a href="#" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="#" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="#" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="#" class="header__sort-link">Giá</a>
+                    </li>
+                </ul>
             </header>
             <!-- Container -->
             <div class="app__container">
                 <div class="grid wide">
-                    <div class="app__content row">
-                        <div class="col l-2">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="category__heading">
                                     <i class="category__heading-icon fa-solid fa-list"></i>
@@ -463,8 +486,9 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="col l-10">
-                            <div class="home-filter">   
+                        <div class="col l-10 m-12 c-12">
+
+                            <div class="home-filter hide_on-mobile-tablet">   
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter__btn btn">Phổ biến</button>
                                 <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -496,12 +520,52 @@
                                         </a>
                                     </div>
                                 </div>
-
                             </div>
 
+                            <nav class="mobile__category hide-on-pc">
+                                <ul class="mobile__category-list">
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                    <li class="mobile__category-item">
+                                        <a href="#" class="mobile__category-link">Item hỗ trợ trainer</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
                             <div class="home-product">
-                                <div class="row">
-                                    <div class="col l-2-4">
+                                <div class="row sm-gutter">
+                                    <div class="col l-2-4 m-4 c-12">
                                         <!-- Product item -->
                                         <a class="home-product-item" href="#">
                                             <div class="home-product-item__img" style="background-image: url(https://cdnb.artstation.com/p/assets/images/images/017/714/067/large/antoine-van-bergen-masterball-avb.jpg?1557075802&dl=1);"></div>

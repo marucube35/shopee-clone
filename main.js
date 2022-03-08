@@ -170,6 +170,8 @@ let products = document.querySelector(".home-product .row");
 for (let i = 0; i < numberOfProducts; i++) {
     let newProduct = document.createElement("div");
     newProduct.classList.add("l-2-4");
+    newProduct.classList.add("m-4");
+    newProduct.classList.add("c-12");
     newProduct.innerHTML = `
 <div class="col">
     <a class="home-product-item" href="#">
