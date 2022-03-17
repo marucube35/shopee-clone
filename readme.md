@@ -4,7 +4,7 @@
 
 Code được thực hiện theo các bài giảng của anh Sơn ở trang web [F8](https://fullstack.edu.vn/).
 
-**Thời gian thực hiện:** 28/2/2022 - ?/?/2022 (chưa code responsive).
+**Thời gian thực hiện:** 28/2/2022 - 8/3/2022 (chưa kể refactor và thay đổi nội dung).
 
 **Kiến thức sử dụng:**
 
